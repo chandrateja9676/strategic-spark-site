@@ -1,24 +1,60 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Navbar } from "@/components/site/navbar";
+import { Hero } from "@/components/site/hero";
+import { Services } from "@/components/site/services";
+import { Solutions } from "@/components/site/solutions";
+import { TechStack } from "@/components/site/tech-stack";
+import { About } from "@/components/site/about";
+import { Careers } from "@/components/site/careers";
+import { Contact } from "@/components/site/contact";
+import { Footer } from "@/components/site/footer";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+const title = "CV Tech Solutions | Next-Gen IT Services & Consulting";
+const description =
+  "CV Tech Solutions builds custom software, cloud infrastructure, data & AI systems and strategic IT roadmaps for enterprises and startups.";
+
 export const Route = createFileRoute("/")({
   component: Index,
+  head: () => ({
+    meta: [
+      { title },
+      { name: "description", content: description },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "/" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+    links: [{ rel: "canonical", href: "/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "CV Tech Solutions",
+          description,
+          areaServed: "Global",
+        }),
+      },
+    ],
+  }),
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="min-h-dvh bg-background">
+      <Navbar />
+      <main>
+        <Hero />
+        <Services />
+        <Solutions />
+        <TechStack />
+        <About />
+        <Careers />
+        <Contact />
+      </main>
+      <Footer />
     </div>
   );
 }
