@@ -50,7 +50,7 @@ export function Footer() {
               bridging complex engineering with real business growth.
             </p>
             <a
-              href="https://www.linkedin.com"
+              href="https://www.linkedin.com/company/cv-tech-solutions/"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-6 inline-flex min-h-11 items-center gap-2 rounded-lg border border-border bg-card px-4 text-sm font-medium transition-colors hover:border-brand hover:text-brand"
