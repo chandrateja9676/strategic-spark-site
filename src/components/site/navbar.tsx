@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "./theme-toggle";
-import logo from "@/assets/cvtech-logo.png";
+//import logo from "@/assets/cvtech-logo.png";
 
 const links = [
   { label: "Home", href: "#home" },
@@ -35,7 +35,7 @@ export function Navbar() {
         className="mx-auto flex max-w-7xl items-center gap-4 px-4 py-3 sm:px-6 lg:px-8"
       >
         <a href="#home" className="flex min-w-0 items-center gap-2">
-          <img src={logo} alt="CV Tech Solutions logo" className="h-9 w-9 shrink-0" />
+          <img src="/cv-logo.png.png" alt="CV Tech Solutions logo" className="h-9 w-9 shrink-0" />
           <span className="truncate font-display text-sm font-bold leading-tight tracking-tight sm:text-base">
             CV TECH <span className="text-gradient-brand">SOLUTIONS</span>
           </span>
