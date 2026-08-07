@@ -84,11 +84,11 @@ export function Contact() {
               <ul className="mt-8 space-y-5 text-sm">
                 <li className="flex items-start gap-3">
                   <Mail className="mt-0.5 size-4 shrink-0 text-white/80" aria-hidden />
-                  <span className="min-w-0 break-words">hello@cvtechsolutions.com</span>
+                  <span className="min-w-0 break-words">hr@cvtechsolutions.in</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <Phone className="mt-0.5 size-4 shrink-0 text-white/80" aria-hidden />
-                  <span>+1 (555) 018-2245</span>
+                  <span>+91 9848227718 </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <MapPin className="mt-0.5 size-4 shrink-0 text-white/80" aria-hidden />
